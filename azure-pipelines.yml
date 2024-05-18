@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Self hosted Agent
+  vmImage: ubuntu-latest
 
 steps:
 - script: echo Hello, world!
