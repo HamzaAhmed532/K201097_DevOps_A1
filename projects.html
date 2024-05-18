@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Portfolio</h1>
+        <p>Hamza Ahmed 20K-1097</p>
+    </header>
+    <nav style="text-align: center; padding: 10px">
+        <a href="home.html" class="button">Home</a>
+        
+    </nav>
+    <section id="projects">
+        <h2 style="text-align: center">Projects</h2>
+        <input type="text" id="techFilter" placeholder="Search by technology" style="display: block; margin: 0 auto; text-align: center;" />
+      <div class="projects">
+
+        <div class="project-card">
+          <h3>Hospital Management System</h3>
+          <p>
+            Developed a comprehensive hospital management system using Java to streamline patient record management, appointment scheduling, and inventory management.
+          </p>
+          <span>Technology: Java Swing SpringBoot</span>
+        </div>
+
+        <div class="project-card">
+          <h3>Student Management System</h3>
+          <p>
+            Implemented a student management system in C++ to manage student records, course enrollment, and grading. The system provides an intuitive interface for administrators to efficiently manage student data.
+          </p>
+          <span>Technology: C++</span>
+        </div>
+
+        <div class="project-card">
+          <h3>E-commerce Website</h3>
+          <p>
+            Developed a full-stack e-commerce website using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The website features user authentication, product management, shopping cart functionality, and secure payment processing.
+          </p>
+          <span>Technology: React JS Express JS Node JS Mongo DB</span>
+        </div>
+      </div>
+      <script>
+        document.getElementById("techFilter").addEventListener("input", function () {
+          var filter = this.value.toUpperCase();
+          var projects = document.querySelectorAll(".project-card");
+    
+          projects.forEach(function (project) {
+            var tech = project.querySelector("span").textContent.toUpperCase();
+            if (tech.indexOf(filter) > -1) {
+              project.style.display = "";
+            } else {
+              project.style.display = "none";
+            }
+          });
+        });
+      </script>
+    </section>
+
+      
+    </section>
+    <footer>
+        <p>Contact me at Hamza@gmail.com</p>
+    </footer>
+    <script>
+
+        document
+          .getElementById("techFilter")
+          .addEventListener("input", function () {
+            var filter = this.value.toUpperCase();
+            var projects = document.querySelectorAll(".project-card");
+
+            projects.forEach(function (project) {
+              var tech = project
+                .querySelector("span")
+                .textContent.toUpperCase();
+              if (tech.indexOf(filter) > -1) {
+                project.style.display = "";
+              } else {
+                project.style.display = "none";
+              }
+            });
+          });
+      </script>
+</body>
+</html>
